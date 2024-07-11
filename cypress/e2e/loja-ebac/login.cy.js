@@ -40,7 +40,7 @@ describe('Login', () => {
         cy.get('.woocommerce-MyAccount-content > :nth-child(3)').should('contain', 'A partir do painel de controle de sua conta')
     });
 
-    it.only('Login com sucesso - com cy.fixture', () => {
+    it('Login com sucesso - com cy.fixture', () => {
         cy.fixture('perfil').then(dados => {
             cy.get('#username').type(dados.usuario, {log:false})
             cy.get('#password').type(dados.senha, {log:false})
@@ -49,5 +49,10 @@ describe('Login', () => {
             cy.get('.woocommerce-MyAccount-content > :nth-child(3)').should('contain', 'A partir do painel de controle de sua conta')
         })
         
+    });
+
+    it.only('Login com sucesso - usando comando customizado', () => {
+        cy.login('jazzqa@gmail.com', 'abc123')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(3)').should('contain', 'A partir do painel de controle de sua conta')
     });
 });

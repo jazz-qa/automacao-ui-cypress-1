@@ -17,6 +17,12 @@ describe('Cadastro', () => {
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
     });
 
+    it('Cadastro com sucesso - com comando customizado', () => {
+        cy.preCadastro(faker.internet.email(), faker.internet.password())
+
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
+    });
+
     it('Usuário já cadastrado', () => {
         cy.get('#reg_email').type('jazzqa@gmail.com')
         cy.get('#reg_password').type(faker.internet.password())
