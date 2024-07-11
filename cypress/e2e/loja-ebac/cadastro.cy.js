@@ -5,10 +5,6 @@ describe('Cadastro', () => {
     beforeEach(() => {
         cy.visit('minha-conta')
     });
-
-    afterEach(() => {
-        cy.screenshot()
-    });
     it('Cadastro com sucesso', () => {
         cy.get('#reg_email').type(faker.internet.email())
         cy.get('#reg_password').type(faker.internet.password())

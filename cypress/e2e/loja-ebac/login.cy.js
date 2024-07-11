@@ -4,10 +4,6 @@ describe('Login', () => {
     beforeEach(() => {
         cy.visit('minha-conta')
     });
-
-    afterEach(() => {
-        cy.screenshot()
-    });
     it('Login com sucesso', () => {
         cy.get('#username').type('jazzqa@gmail.com')
         cy.get('#password').type('abc123')
