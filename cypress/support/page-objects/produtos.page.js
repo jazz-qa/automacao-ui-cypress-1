@@ -14,7 +14,7 @@ class ProdutosPage {
     }
 
     visitarProduto() {
-
+        
     }
 
     addProdutoCarrinho() {

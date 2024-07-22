@@ -17,7 +17,7 @@ describe('Produtos', () => {
     });
 
     it('Visitar a página do produto', () => {
-        
+       ProdutosPage.visitarProduto() 
     });
 
     it('Adicionar produto ao carrinho', () => {
